@@ -1,0 +1,5 @@
+reviewer_item,requirement,evidence,status
+2.1 core,Complete raw→clean→dedup→conflict→sampling→collision→final data-flow with class counts,R1_CLOSED_DATA_FLOW.csv,PASS
+6,Explain why only about 2.8% of unique CICIoT rows enter final splits,"600,000-row deterministic capped cohort from 21,073,410 unique nonconflicting rows; 596,939 remain after 3,061 transformed-collision removals",PASS
+7,Prove no train/validation/test leakage and explain prevalence change,split before cohort by disjoint relative-file groups; transformed overlap=0; target benign fraction intentionally changed to 25%; final benign prevalence=25.0587%,PASS
+8,Sampling-seed stability if sampling is random,cohort selection is deterministic ORDER BY row_hash within locked strata; no random cohort seed exists,PASS_NOT_APPLICABLE

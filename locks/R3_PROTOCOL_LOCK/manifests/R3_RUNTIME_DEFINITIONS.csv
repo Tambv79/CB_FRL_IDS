@@ -1,0 +1,6 @@
+﻿metric,definition,interpretation
+sum_client_CPU_seconds,sum of measured local-training durations across all K candidates,total simulated CPU work; not FL critical path
+max_client_seconds_simulated_parallel_critical_path,maximum measured local-training duration across K candidates per round,approximate parallel client critical path; excludes real network scheduling
+server_selection_seconds,"wall time of static eligibility, ranking and iterative feasibility",server-side selection overhead
+aggregation_seconds,wall time for selected sample-weighted aggregation or norm-clipped averaging,server aggregation overhead
+wall_clock_seconds,actual cell wall clock on locked machine,implementation runtime on Dell PowerEdge R750xs CPU-only run

@@ -1,0 +1,8 @@
+﻿concept,equation,algorithm,code,test,status
+Utility,marginal J_local-J_global,compute once per candidate on same subset,marginal_utility,test_marginal_utility,PASS_REQUIRED
+Static eligibility,finite/support/self-fit indicator,filter before ranking,static_eligible,test_static_eligibility,PASS_REQUIRED
+Ranking eligibility,priority>0,skip non-positive priorities,select_clients,test_nonpositive_not_forced,PASS_REQUIRED
+Residual feasibility,used+c_i<=B,greedy iterative admission,select_clients,test_hard_budget,PASS_REQUIRED
+Empty round,S_t=empty => theta_{t+1}=theta_t,no fallback,aggregate_or_keep,test_empty_round_keeps_global,PASS_REQUIRED
+CB score,"max(u_norm-0.25c_norm,0)",sort once because novelty absent,priority_values,test_score_no_second_cost_penalty,PASS_REQUIRED
+Oracle,argmax subset sum score subject to bytes,exact enumeration K=10,_exact_oracle,test_oracle_exact,PASS_REQUIRED

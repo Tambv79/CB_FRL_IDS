@@ -1,0 +1,17 @@
+dataset,order,stage,benign_or_benign_only,attack_or_attack_only,conflicting_hashes,total,removed_at_stage,reason_or_rule
+CICIDS2017,1,Raw ingestion,2273097,557646,0,2830743,0,All discovered raw rows; all labels normalized to binary; malformed rows skipped=0
+CICIDS2017,2,Label cleaning / binary normalization,2273097,557646,0,2830743,0,No rows removed; all raw labels mapped successfully
+CICIDS2017,3,Exact feature deduplication,2095786,425180,698,2521664,309079,One row per 128-bit feature hash; conflicting hashes retained as a separate category at this stage
+CICIDS2017,4,Conflict removal,2095786,425180,0,2520966,698,Exclude every feature hash observed with both labels
+CICIDS2017,5,Source-group-disjoint split pool,2095786,425180,0,2520966,0,Relative-file groups assigned before cohort selection; no group appears in more than one split
+CICIDS2017,6,Deterministic cohort selection,2095786,425180,0,2520966,0,Capped/stratified cohort after split; CICIoT target benign fraction=0.25 and source-class balancing; CICIDS no cap
+CICIDS2017,7,Transformed-collision removal,2046618,422600,0,2469218,51748,Globally remove every repeated transformed vector across and within splits
+CICIDS2017,8,Final train+validation+test,2046618,422600,0,2469218,0,Collision-free processed rows used by historical experiments
+CICIoT2023,1,Raw ingestion,1098191,45678509,0,46776700,0,All discovered raw rows; all labels normalized to binary; malformed rows skipped=0
+CICIoT2023,2,Label cleaning / binary normalization,1098191,45678509,0,46776700,0,No rows removed; all raw labels mapped successfully
+CICIoT2023,3,Exact feature deduplication,1093034,19980376,906,21074316,25702384,One row per 128-bit feature hash; conflicting hashes retained as a separate category at this stage
+CICIoT2023,4,Conflict removal,1093034,19980376,0,21073410,906,Exclude every feature hash observed with both labels
+CICIoT2023,5,Source-group-disjoint split pool,1093034,19980376,0,21073410,0,Relative-file groups assigned before cohort selection; no group appears in more than one split
+CICIoT2023,6,Deterministic cohort selection,150000,450000,0,600000,20473410,Capped/stratified cohort after split; CICIoT target benign fraction=0.25 and source-class balancing; CICIDS no cap
+CICIoT2023,7,Transformed-collision removal,149585,447354,0,596939,3061,Globally remove every repeated transformed vector across and within splits
+CICIoT2023,8,Final train+validation+test,149585,447354,0,596939,0,Collision-free processed rows used by historical experiments

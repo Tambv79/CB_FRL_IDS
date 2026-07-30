@@ -1,0 +1,21 @@
+{
+  "status": "LOCKED",
+  "files": [
+    {
+      "file": "config/R2_METHOD_LOCK.yaml",
+      "sha256": "5e90e045e9ede2bdbe2a4678a5774dc34d920283d9e04179de159449d1b642bb"
+    },
+    {
+      "file": "code/r2_locked_method.py",
+      "sha256": "26cdd783ea8af8e5157a0e781ed9c22ddca900372ed2191e8ca9618b344fdb37"
+    },
+    {
+      "file": "docs/R2_METHOD_SPECIFICATION_EN.md",
+      "sha256": "636933a1c335207e6863b833f86a1663a6c6cdb9640b72f811503829891ddac5"
+    },
+    {
+      "file": "R2_GATE.json",
+      "sha256": "e8ba78acd23b8ba4a5b7fb20b26632794164847d1ff91daf5e2a6ce663ef2c0d"
+    }
+  ]
+}

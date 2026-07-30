@@ -1,0 +1,38 @@
+
+cff-version: 1.2.0
+message: "If you use this repository or artifact, please cite the accompanying CB-FRL-IDS manuscript."
+title: "CB-FRL-IDS Reproducibility Repository"
+type: software
+authors:
+  - family-names: "Bui"
+    given-names: "Van-Tam"
+    orcid: "https://orcid.org/0009-0007-0064-266X"
+  - family-names: "Le"
+    given-names: "Van-Hung"
+  - family-names: "Le"
+    given-names: "Dac-Nhuong"
+version: "1.0.0"
+date-released: 2026-07-30
+url: "https://github.com/USERNAME/CB-FRL-IDS"
+repository-code: "https://github.com/USERNAME/CB-FRL-IDS"
+license: MIT
+keywords:
+  - federated learning
+  - network intrusion detection
+  - client selection
+  - communication efficiency
+  - non-inferiority testing
+  - metadata leakage
+preferred-citation:
+  type: article
+  title: "CB-FRL-IDS: Communication-Budgeted Pre-Upload Policy-Update Selection for Federated Network Intrusion Detection"
+  authors:
+    - family-names: "Bui"
+      given-names: "Van-Tam"
+      orcid: "https://orcid.org/0009-0007-0064-266X"
+    - family-names: "Le"
+      given-names: "Van-Hung"
+    - family-names: "Le"
+      given-names: "Dac-Nhuong"
+  journal: "Journal of Information Security and Applications"
+  year: 2026

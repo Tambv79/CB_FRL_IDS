@@ -1,0 +1,2 @@
+dataset,artifact,finding,authoritative_reconstruction,status
+CICIDS2017,cohort_selection_summary.json / cohort_selection_counts.csv,STALE_AFTER_SPLIT_REPAIR,"cap=null, so selected cohort equals repaired source_group_split_manifest exactly",SUPERSEDED_IN_R1

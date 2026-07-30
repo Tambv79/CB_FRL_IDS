@@ -1,0 +1,19 @@
+{
+  "phase": "R2 — Method Lock",
+  "status": "PASS_METHOD_LOCKED",
+  "protocol_id": "CB-PREUPLOAD-SELECT-R2-METHOD-LOCK-V1",
+  "unit_tests": 10,
+  "unit_test_status": "PASS",
+  "locked_decisions": [
+    "marginal utility on same subset and threshold 0.5",
+    "static eligibility separated from ranking and residual feasibility",
+    "minimum utility support 20 with at least 5 benign and 5 attack; minimum fit 180",
+    "full denominator all K candidates",
+    "forced fallback disabled; empty round keeps global unchanged",
+    "CB-Score removes second division by cost; historical double-cost retained as ablation",
+    "novelty removed from core",
+    "budget named selected-update uplink budget"
+  ],
+  "new_results_viewed": false,
+  "next_phase": "R3 protocol lock"
+}

@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "test_empty_round_keeps_global (test_r2_method_lock.TestR2MethodLock.test_empty_round_keeps_global) ... ok\ntest_full_denominator (test_r2_method_lock.TestR2MethodLock.test_full_denominator) ... ok\ntest_hard_budget (test_r2_method_lock.TestR2MethodLock.test_hard_budget) ... ok\ntest_marginal_utility (test_r2_method_lock.TestR2MethodLock.test_marginal_utility) ... ok\ntest_nonpositive_not_forced (test_r2_method_lock.TestR2MethodLock.test_nonpositive_not_forced) ... ok\ntest_novelty_rejected (test_r2_method_lock.TestR2MethodLock.test_novelty_rejected) ... ok\ntest_oracle_exact (test_r2_method_lock.TestR2MethodLock.test_oracle_exact) ... ok\ntest_random_deterministic (test_r2_method_lock.TestR2MethodLock.test_random_deterministic) ... ok\ntest_score_no_second_cost_penalty (test_r2_method_lock.TestR2MethodLock.test_score_no_second_cost_penalty) ... ok\ntest_static_eligibility (test_r2_method_lock.TestR2MethodLock.test_static_eligibility) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.017s\n\nOK\n"
+}

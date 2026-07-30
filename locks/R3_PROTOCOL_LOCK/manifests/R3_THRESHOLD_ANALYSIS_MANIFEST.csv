@@ -1,0 +1,61 @@
+﻿analysis_id,dataset,seed,analysis,source,selection_rule,applied_to,status
+METHOD_SPECIFIC__CICIDS2017_COVERAGE_R1__seed42,CICIDS2017_COVERAGE_R1,42,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIDS2017_COVERAGE_R1__seed42,CICIDS2017_COVERAGE_R1,42,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIDS2017_COVERAGE_R1__seed42,CICIDS2017_COVERAGE_R1,42,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIDS2017_COVERAGE_R1__seed123,CICIDS2017_COVERAGE_R1,123,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIDS2017_COVERAGE_R1__seed123,CICIDS2017_COVERAGE_R1,123,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIDS2017_COVERAGE_R1__seed123,CICIDS2017_COVERAGE_R1,123,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIDS2017_COVERAGE_R1__seed777,CICIDS2017_COVERAGE_R1,777,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIDS2017_COVERAGE_R1__seed777,CICIDS2017_COVERAGE_R1,777,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIDS2017_COVERAGE_R1__seed777,CICIDS2017_COVERAGE_R1,777,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIDS2017_COVERAGE_R1__seed2026,CICIDS2017_COVERAGE_R1,2026,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIDS2017_COVERAGE_R1__seed2026,CICIDS2017_COVERAGE_R1,2026,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIDS2017_COVERAGE_R1__seed2026,CICIDS2017_COVERAGE_R1,2026,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIDS2017_COVERAGE_R1__seed3407,CICIDS2017_COVERAGE_R1,3407,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIDS2017_COVERAGE_R1__seed3407,CICIDS2017_COVERAGE_R1,3407,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIDS2017_COVERAGE_R1__seed3407,CICIDS2017_COVERAGE_R1,3407,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIDS2017_COVERAGE_R1__seed11,CICIDS2017_COVERAGE_R1,11,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIDS2017_COVERAGE_R1__seed11,CICIDS2017_COVERAGE_R1,11,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIDS2017_COVERAGE_R1__seed11,CICIDS2017_COVERAGE_R1,11,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIDS2017_COVERAGE_R1__seed314,CICIDS2017_COVERAGE_R1,314,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIDS2017_COVERAGE_R1__seed314,CICIDS2017_COVERAGE_R1,314,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIDS2017_COVERAGE_R1__seed314,CICIDS2017_COVERAGE_R1,314,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIDS2017_COVERAGE_R1__seed2718,CICIDS2017_COVERAGE_R1,2718,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIDS2017_COVERAGE_R1__seed2718,CICIDS2017_COVERAGE_R1,2718,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIDS2017_COVERAGE_R1__seed2718,CICIDS2017_COVERAGE_R1,2718,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIDS2017_COVERAGE_R1__seed9001,CICIDS2017_COVERAGE_R1,9001,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIDS2017_COVERAGE_R1__seed9001,CICIDS2017_COVERAGE_R1,9001,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIDS2017_COVERAGE_R1__seed9001,CICIDS2017_COVERAGE_R1,9001,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIDS2017_COVERAGE_R1__seed2027,CICIDS2017_COVERAGE_R1,2027,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIDS2017_COVERAGE_R1__seed2027,CICIDS2017_COVERAGE_R1,2027,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIDS2017_COVERAGE_R1__seed2027,CICIDS2017_COVERAGE_R1,2027,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIoT2023_R1__seed42,CICIoT2023_R1,42,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIoT2023_R1__seed42,CICIoT2023_R1,42,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIoT2023_R1__seed42,CICIoT2023_R1,42,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIoT2023_R1__seed123,CICIoT2023_R1,123,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIoT2023_R1__seed123,CICIoT2023_R1,123,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIoT2023_R1__seed123,CICIoT2023_R1,123,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIoT2023_R1__seed777,CICIoT2023_R1,777,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIoT2023_R1__seed777,CICIoT2023_R1,777,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIoT2023_R1__seed777,CICIoT2023_R1,777,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIoT2023_R1__seed2026,CICIoT2023_R1,2026,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIoT2023_R1__seed2026,CICIoT2023_R1,2026,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIoT2023_R1__seed2026,CICIoT2023_R1,2026,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIoT2023_R1__seed3407,CICIoT2023_R1,3407,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIoT2023_R1__seed3407,CICIoT2023_R1,3407,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIoT2023_R1__seed3407,CICIoT2023_R1,3407,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIoT2023_R1__seed11,CICIoT2023_R1,11,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIoT2023_R1__seed11,CICIoT2023_R1,11,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIoT2023_R1__seed11,CICIoT2023_R1,11,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIoT2023_R1__seed314,CICIoT2023_R1,314,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIoT2023_R1__seed314,CICIoT2023_R1,314,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIoT2023_R1__seed314,CICIoT2023_R1,314,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIoT2023_R1__seed2718,CICIoT2023_R1,2718,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIoT2023_R1__seed2718,CICIoT2023_R1,2718,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIoT2023_R1__seed2718,CICIoT2023_R1,2718,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIoT2023_R1__seed9001,CICIoT2023_R1,9001,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIoT2023_R1__seed9001,CICIoT2023_R1,9001,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIoT2023_R1__seed9001,CICIoT2023_R1,9001,fixed sensitivity,none,threshold=0.5,all methods,LOCKED
+METHOD_SPECIFIC__CICIoT2023_R1__seed2027,CICIoT2023_R1,2027,method-specific,each method validation probabilities,maximize F1 subject to FPR<=0.05; fallback minimum FPR then maximum F1,matching method test predictions,LOCKED
+SHARED_FULL__CICIoT2023_R1__seed2027,CICIoT2023_R1,2027,shared,Full-Contextual validation probabilities only,same locked rule,all matched methods and beta values,LOCKED
+FIXED_05__CICIoT2023_R1__seed2027,CICIoT2023_R1,2027,fixed sensitivity,none,threshold=0.5,all methods,LOCKED

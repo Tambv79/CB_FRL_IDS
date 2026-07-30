@@ -1,0 +1,9 @@
+dataset,stage,benign,attack,total,benign_percent,retention_vs_unique_nonconflicting_percent,rule
+CICIDS2017,raw,2273097,557646,2830743,80.30036637024273,112.28802768462566,observed raw prevalence
+CICIDS2017,unique_nonconflicting,2095786,425180,2520966,83.13424298463367,100.0,pre-cohort prevalence after dedup/conflict removal
+CICIDS2017,selected_cohort,2095786,425180,2520966,83.13424298463367,100.0,all rows retained
+CICIDS2017,final_processed,2046618,422600,2469218,82.88526974937004,97.94729480683199,after global transformed-collision removal
+CICIoT2023,raw,1098191,45678509,46776700,2.347730814700481,221.97024591653653,observed raw prevalence
+CICIoT2023,unique_nonconflicting,1093034,19980376,21073410,5.1867922657035574,100.0,pre-cohort prevalence after dedup/conflict removal
+CICIoT2023,selected_cohort,150000,450000,600000,25.0,2.8471898947536256,intended benign fraction=0.25
+CICIoT2023,final_processed,149585,447354,596939,25.058674336908798,2.832664480973891,after global transformed-collision removal

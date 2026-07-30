@@ -1,0 +1,162 @@
+protocol_id: CB-PREUPLOAD-SELECT-R4-EXECUTION-V1.1-DISK-CALIBRATED
+r2_protocol_id: CB-PREUPLOAD-SELECT-R2-METHOD-LOCK-V1
+r3_protocol_id: CB-PREUPLOAD-SELECT-R3-PROTOCOL-LOCK-V1
+status: PACKAGE_BUILT_NOT_REALDATA_EXECUTED_DISK_PREFLIGHT_CALIBRATED
+project_root: <PROJECT_ROOT>
+paths:
+  step6_root: <PROJECT_ROOT>/outputs_step6_data_integrity_v2
+  primary_cache_root: <PROJECT_ROOT>/cache_r4_revision
+  assignment_root: <PROJECT_ROOT>/assignments_r4_revision
+  output_root: <PROJECT_ROOT>/outputs_r4_revision
+  legacy_ood_cache: <PROJECT_ROOT>/cache_step7_primary/CICIDS2017
+  legacy_ood_assignment_root: <PROJECT_ROOT>/outputs_step6_data_integrity_v2/CICIDS2017/client_partitions
+  cicids_suspicious_feature_file: <PROJECT_ROOT>/outputs_step7b_cicids_data/CICIDS2017/suspicious_feature_decisions.csv
+raw_dataset_paths:
+  CICIDS2017: <DATA_ROOT>/CICIDS2017
+  CICIoT2023: <DATA_ROOT>/CICIoT2023
+machine_lock:
+  server: Dell PowerEdge R750xs 12x3.5in
+  cpu: Intel Xeon Silver 4314
+  ram_gb: 128
+  storage: 14.4 TB SAS
+  gpu_present: NVIDIA A2
+  execution_device: cpu
+  torch_threads_per_cell: 4
+  parallel_training_cells: 1
+  note: CPU is locked for comparability with accepted historical artifacts; GPU is
+    not used.
+learner:
+  hidden_units:
+  - 128
+  - 64
+  dropout: 0.1
+  optimizer: AdamW
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  batch_size: 512
+  local_steps_per_round: 24
+  gradient_clip_norm: 5.0
+  local_utility_fraction: 0.1
+  local_utility_cap_rows: 4096
+  validation_monitor_cap_rows: 50000
+  evaluation_batch_size: 8192
+  deterministic_algorithms: true
+method:
+  utility_fpr_penalty: 0.25
+  eligibility:
+    minimum_utility_rows: 20
+    minimum_benign_utility_rows: 5
+    minimum_attack_utility_rows: 5
+    minimum_fit_rows: 180
+  ranking:
+    alpha_u: 1.0
+    alpha_c: 0.25
+    winsor_lower_quantile: 0.05
+    winsor_upper_quantile: 0.95
+  oort_adapted:
+    system_penalty_gamma: 1.0
+  novelty_enabled: false
+airtime:
+  rates_mbps:
+  - 1.0
+  - 1.5
+  - 2.0
+  - 3.0
+  - 4.0
+  - 6.0
+  - 8.0
+  - 10.0
+  - 15.0
+  - 20.0
+  assignment: deterministic client-rate rotation by locked seed
+  formula_microseconds: ceil(8 * wire_bytes / rate_Mbps)
+  unit_identity: 1 Mbps equals 1 bit per microsecond
+communication:
+  budget_unit: selected_update_uplink_bytes
+  update_message_overhead_bytes: 64
+  metadata_message_overhead_bytes: 64
+  downlink_message_overhead_bytes: 64
+  compression: zlib_level_6_lossless
+  decimal_MB: true
+  retransmission: none
+threshold:
+  grid_start: 0.05
+  grid_stop: 0.95
+  grid_step: 0.01
+  fpr_target: 0.05
+  utility_proxy_threshold: 0.5
+global_statistics_assumption:
+  class_counts: computed centrally from the already materialized global training split
+    for simulation class weighting
+  threshold_information: validation-derived thresholds remain server-side analysis
+    artifacts and are not client metadata
+  communication_accounting: no extra collection bytes are added because these quantities
+    are available in the centralized experimental pipeline
+  limitation: this does not model secure distributed collection of global counts or
+    thresholds
+runtime:
+  checkpoint_every_round: true
+  test_predictions_saved_once: true
+  final_test_once: true
+  disk_space_min_gb: 12
+  heartbeat_seconds: 60
+  stop_on_cell_failure: true
+  max_cell_retries: 1
+  disk_space_reserve_gb: 4
+  disk_space_runtime_stop_gb: 4
+  disk_estimator: data-shape-and-manifest-based conservative upper bound
+robustness:
+  malicious_fraction: 0.3
+  label_flip_probability: 0.5
+  sign_flip_multiplier: -5.0
+  forged_utility_addition: 1.0
+  norm_clip_rule: median_plus_2.5_MAD
+privacy:
+  folds: 5
+  attackers:
+  - LogisticRegression
+  - RandomForest
+  - MLP
+  views:
+  - Raw
+  - Noisy-Quantized
+  - No-Size
+  - Minimal-Bucketed
+  targets:
+  - client_size_above_seed_median
+  - attack_ratio_above_seed_median
+  attacker_hyperparameters:
+    LogisticRegression:
+      C: 1.0
+      max_iter: 2000
+      class_weight: balanced
+      solver: liblinear
+    RandomForest:
+      n_estimators: 300
+      max_depth: 8
+      min_samples_leaf: 3
+      class_weight: balanced
+      n_jobs: 1
+    MLP:
+      hidden_layer_sizes:
+      - 32
+      - 16
+      alpha: 0.0001
+      learning_rate_init: 0.001
+      max_iter: 1000
+      early_stopping: true
+  group_bootstrap_resamples: 2000
+execution_phases:
+- preflight
+- build_cache
+- prepare_assignments
+- primary
+- heterogeneity
+- natural_partition
+- ood_stress
+- feature_sensitivity
+- robustness
+- privacy
+- statistics
+- validate
+- finalize

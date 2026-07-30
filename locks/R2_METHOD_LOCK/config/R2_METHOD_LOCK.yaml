@@ -1,0 +1,57 @@
+protocol_id: CB-PREUPLOAD-SELECT-R2-METHOD-LOCK-V1
+status: LOCKED
+scientific_positioning:
+  core_contribution: learner-compatible pre-upload selection protocol under a hard selected-update uplink budget
+  not_a_core_claim:
+    - reinforcement-learning superiority
+    - universal superiority of one ranking score
+    - adaptive novelty benefit
+utility:
+  definition: "u_i^t = [F1(theta_i^t,H)-0.25 FPR(theta_i^t,H)] - [F1(theta^t)-0.25 FPR(theta^t)]"
+  evaluation_subset: same client-held utility subset for global and local models
+  proxy_threshold: 0.5
+  utility_fraction: 0.10
+  utility_cap_rows: 4096
+eligibility:
+  minimum_utility_rows: 20
+  minimum_benign_utility_rows: 5
+  minimum_attack_utility_rows: 5
+  minimum_fit_rows: 180
+  finite_metadata_required: true
+  self_fit_rule: wire_bytes <= entire_round_selected_update_budget
+  rationale: Step6 guarantees at least 200 rows per client; the locked 10% utility split yields at least 20 utility rows and 180 fit rows, while both classes are required because the proxy uses both F1 and FPR.
+ranking:
+  winsor_lower_quantile: 0.05
+  winsor_upper_quantile: 0.95
+  alpha_u: 1.0
+  alpha_c: 0.25
+  ranking_eligibility: priority_strictly_positive_except_random_and_cost_only
+  core_deployment_variant: CB-Score
+  core_priority: max(alpha_u*u_norm-alpha_c*c_norm,0)
+  historical_double_cost_ablation: max(alpha_u*u_norm-alpha_c*c_norm,0)/wire_bytes
+feasibility:
+  iterative_rule: used_bytes + candidate_wire_bytes <= round_budget_bytes
+  forced_fallback: disabled
+  empty_round_behavior: keep_global_model_unchanged
+full_reference:
+  denominator: all_K_candidates
+  eligibility_filter_applied: false
+budget:
+  name: selected-update uplink budget
+  formula: floor(beta * sum_all_candidate_update_wire_bytes)
+  metadata_and_downlink: reported_but_not_constrained_by_the_budget
+novelty_enabled: false
+novelty:
+  status: removed_from_core
+  optional_extension_location: supporting_appendix_only
+  condition_for_future_activation: separate validation-locked protocol and iterative recomputation after every admission
+oort_adapted:
+  status: literature-compatible adapted baseline, not an exact Oort reproduction
+  statistical_utility: positive current marginal utility
+  system_penalty: "(T/t_i)^gamma when t_i>T, otherwise 1"
+  preferred_duration_T: candidate-pool median predicted local-training-plus-uplink duration
+  system_penalty_gamma: 1.0
+oracle:
+  implementation: exact enumeration because K=10
+  objective: maximize total positive CB-Score under the exact selected-update uplink budget
+  tie_break: higher total raw utility, then fewer bytes, then lexicographic client ids

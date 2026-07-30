@@ -1,0 +1,16 @@
+﻿threshold_analysis,family,total,met_gate,inconclusive
+fixed_0.5,F1_NI_CB_vs_Full,12,6,6
+fixed_0.5,FPR_SAFETY_CB_vs_Full,12,3,9
+fixed_0.5,PRAUC_NI_CB_vs_Full,12,11,1
+fixed_0.5,SAME_BUDGET_F1,36,0,36
+fixed_0.5,SAME_BUDGET_PRAUC,36,0,36
+method_specific,F1_NI_CB_vs_Full,12,11,1
+method_specific,FPR_SAFETY_CB_vs_Full,12,0,12
+method_specific,PRAUC_NI_CB_vs_Full,12,11,1
+method_specific,SAME_BUDGET_F1,36,0,36
+method_specific,SAME_BUDGET_PRAUC,36,0,36
+shared_full_threshold,F1_NI_CB_vs_Full,12,6,6
+shared_full_threshold,FPR_SAFETY_CB_vs_Full,12,5,7
+shared_full_threshold,PRAUC_NI_CB_vs_Full,12,11,1
+shared_full_threshold,SAME_BUDGET_F1,36,0,36
+shared_full_threshold,SAME_BUDGET_PRAUC,36,0,36

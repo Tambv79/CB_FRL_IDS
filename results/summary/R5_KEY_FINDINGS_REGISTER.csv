@@ -1,0 +1,11 @@
+﻿finding_id,domain,finding,interpretation
+F01,Primary-CICIoT2023,CB-Score beta 0.2–1.0 met method-specific F1 and PR-AUC non-inferiority versus Full; beta 0.1 did not.,Use beta 0.2 as strongest communication-preservation operating point; beta 0.4 as more conservative operating point.
+F02,Primary-CICIoT2023,"At beta 0.2, selected uplink fell by 82.8% and broadcast-equivalent E2E by 74.4%, with ΔF1=-0.0022 and ΔPR-AUC=-0.0002.","Strongest central quantitative result, but not proof of selector superiority."
+F03,Same-budget baselines,0/72 same-budget superiority gates passed.,"CB-Score cannot be presented as superior to Utility-Only, Utility/Cost, or Oort-style alternatives."
+F04,Threshold safety,0/12 method-specific FPR-safety gates passed.,No general FPR-safety claim; use threshold-specific descriptive reporting.
+F05,CICIDS2017,"Full mean F1=0.0043, PR-AUC=0.1737 below test prevalence=0.2349, ROC-AUC=0.3491.",Negative/generalization result; relative NI is operationally uninformative.
+F06,Heterogeneity,CICIoT2023 performance degrades materially at alpha=0.1; CB F1=0.8267 versus 0.9214 at alpha=1.0.,Selection does not eliminate severe non-IID sensitivity.
+F07,Natural partition,"Natural-source Full collapsed to FPR=1.0, while budgeted selectors achieved F1 0.8618–0.8905.","Selection may regularize under domain skew, but this is descriptive and baseline failure must be discussed."
+F08,Robustness,"On CICIoT2023, honest CB reduced malicious selection to about 5–10% under attack and preserved F1 better than Full, but forged utility raised malicious selection to about 70–91% and caused severe degradation.","Robust to some honest-metadata attacks, vulnerable to metadata falsification; no Byzantine guarantee."
+F09,Privacy,No-Size had lower worst-case AUC than Raw/Noisy-Quantized; Raw and Noisy-Quantized retained near-perfect client-size leakage.,Size metadata is a dominant leakage channel; minimization helps empirically but not formally.
+F10,Runtime,R4 ran on HP Pavilion i3-1215U CPU-only; execution order/cache effects make cross-method wall-clock comparisons unreliable.,Report hardware and component overhead only; do not use wall-clock speedup as a central claim.

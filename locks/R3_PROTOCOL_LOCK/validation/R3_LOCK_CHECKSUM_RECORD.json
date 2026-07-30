@@ -1,0 +1,65 @@
+{
+  "status": "LOCKED_BEFORE_NEW_RESULTS",
+  "files": [
+    {
+      "file": "config/R3_PROTOCOL_LOCK.yaml",
+      "sha256": "0961c428a58899708547b6c8ca9deed4a4cf45b6f797929290719ef70b267cb3"
+    },
+    {
+      "file": "config/R2_METHOD_LOCK.yaml",
+      "sha256": "5e90e045e9ede2bdbe2a4678a5774dc34d920283d9e04179de159449d1b642bb"
+    },
+    {
+      "file": "code/r2_locked_method.py",
+      "sha256": "26cdd783ea8af8e5157a0e781ed9c22ddca900372ed2191e8ca9618b344fdb37"
+    },
+    {
+      "file": "manifests/R3_FEATURE_SENSITIVITY_CELL_MANIFEST.csv",
+      "sha256": "ff1bd5d8b500a1f0e076ce5a38b0c41b4ce75a22ab620aefe4680fed72e4213e"
+    },
+    {
+      "file": "manifests/R3_HETEROGENEITY_CELL_MANIFEST.csv",
+      "sha256": "1504a19114047e69ae7387883e0386c78da8f62dfeb9f8f9c3404bffa1c32307"
+    },
+    {
+      "file": "manifests/R3_HYPOTHESIS_MANIFEST.csv",
+      "sha256": "f0a77cb2da5c2425652307328ab7f75b0da99133c9671a652a9cb4e8d4cad117"
+    },
+    {
+      "file": "manifests/R3_METADATA_FIELD_ENCODING.csv",
+      "sha256": "483d827f2a761c5ff07e86bc726905b02a6d9b6c512d68b5739b554eed6e1338"
+    },
+    {
+      "file": "manifests/R3_NATURAL_PARTITION_CELL_MANIFEST.csv",
+      "sha256": "6d4299e9f1591dc8c9e6b7fbc734afcebb752227ce4ab9f7ed64b9e8c955171d"
+    },
+    {
+      "file": "manifests/R3_OOD_STRESS_CELL_MANIFEST.csv",
+      "sha256": "9b96b6e4921ade44f32c0f1e53c366c206ff047aba93ca0b714140d5acb0bd71"
+    },
+    {
+      "file": "manifests/R3_PRIMARY_CELL_MANIFEST.csv",
+      "sha256": "b7e4211f813c959e161c09a5dd8d22f9e383265dc6654f9001f63b781e6ae8eb"
+    },
+    {
+      "file": "manifests/R3_PRIVACY_CELL_MANIFEST.csv",
+      "sha256": "941a4389b95d58be64742d046ffeca850ede0c6753e8cd5383acdf736038a573"
+    },
+    {
+      "file": "manifests/R3_REQUIRED_OUTPUT_SCHEMA.csv",
+      "sha256": "aa60769eadf6b88ebee4dcbc1dcfa6f9aa3e0ef45779aa64230c88eb2080d71b"
+    },
+    {
+      "file": "manifests/R3_ROBUSTNESS_CELL_MANIFEST.csv",
+      "sha256": "0dc34578282399b470f3b80009227b2b341de3043bd69693abc23cbdd1831ba9"
+    },
+    {
+      "file": "manifests/R3_RUNTIME_DEFINITIONS.csv",
+      "sha256": "9e3f80b01b982ec703fe05087e0f31aa70f8301c38dd5b81c1fff3eeda67dd36"
+    },
+    {
+      "file": "manifests/R3_THRESHOLD_ANALYSIS_MANIFEST.csv",
+      "sha256": "eaace1f402150a459138c00775056b1b8c10b2d72476bd0a0e28e17c7db04398"
+    }
+  ]
+}

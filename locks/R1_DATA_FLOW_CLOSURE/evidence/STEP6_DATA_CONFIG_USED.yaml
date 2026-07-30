@@ -1,0 +1,141 @@
+protocol_id: CB-FRL-IDS-STEP6-DATA-INTEGRITY-V2
+project_root: D:\CB_FRL_IDS_REAL_RUN
+output_root: D:\CB_FRL_IDS_REAL_RUN\outputs_step6_data_integrity_v2
+full_audit: true
+chunksize: 50000
+split:
+  train: 0.7
+  validation: 0.15
+  test: 0.15
+  seed: 42
+  group_disjoint: true
+cohort:
+  CICIDS2017:
+    max_unique_rows: null
+    target_benign_fraction: null
+    balance_by_source_class: false
+  CICIoT2023:
+    max_unique_rows: 600000
+    target_benign_fraction: 0.25
+    balance_by_source_class: true
+federation:
+  client_count: 10
+  primary_alpha_dir: 0.5
+  alpha_sensitivity:
+  - 0.1
+  - 0.5
+  - 1.0
+  paired_seeds:
+  - 42
+  - 123
+  - 777
+  - 2026
+  - 3407
+  - 11
+  - 314
+  - 2718
+  - 9001
+  - 2027
+  minimum_client_support: 200
+  allow_single_class_clients: true
+  partition_retry_limit: 1000
+preprocessing:
+  numeric_detection_ratio: 0.98
+  missing_column_drop_threshold: 0.95
+  categorical_max_cardinality: 50
+  training_reservoir_rows: 200000
+  winsor_lower_quantile: 0.005
+  winsor_upper_quantile: 0.995
+  robust_scale: median_iqr
+  unknown_category_token: __UNK__
+  missing_category_token: __MISSING__
+  float_dtype: float32
+  write_compatibility_csv: false
+leakage_audit:
+  auto_drop_keywords:
+  - flow id
+  - flow_id
+  - src ip
+  - source ip
+  - dst ip
+  - destination ip
+  - srcip
+  - dstip
+  - timestamp
+  - datetime
+  - date
+  - uid
+  - uuid
+  - mac
+  - address
+  - addr
+  - session id
+  - connection id
+  auto_drop_exact:
+  - label
+  - binary_label
+  - class
+  - category
+  - attack
+  - attack_type
+  - target
+  - source_label
+  preserve_exact:
+  - protocol
+  - proto
+  - service
+  - state
+  deterministic_purity_threshold: 0.999
+  deterministic_max_unique: 100
+  approved_suspicious_features: []
+datasets:
+  CICIDS2017:
+    root: D:\DATASETS\CICIDS2017
+    file_globs:
+    - '**/*.csv'
+    label_candidates:
+    - Label
+    - label
+    - binary_label
+    - class
+    - Class
+    benign_tokens:
+    - BENIGN
+    - benign
+    - normal
+    - Normal
+    - '0'
+    - 'false'
+    folder_label_fallback: false
+    benign_folder_tokens: []
+    source_group: relative_file
+    source_class: binary_label
+  CICIoT2023:
+    root: D:\DATASETS\CICIoT2023
+    file_globs:
+    - '**/*.csv'
+    label_candidates:
+    - label
+    - Label
+    - binary_label
+    - class
+    - Class
+    - category
+    - Category
+    benign_tokens:
+    - BENIGN
+    - benign
+    - Benign
+    - Benign_Final
+    - normal
+    - Normal
+    - '0'
+    - 'false'
+    folder_label_fallback: true
+    benign_folder_tokens:
+    - benign
+    - benign_final
+    - normal
+    - background
+    source_group: relative_file
+    source_class: top_folder

@@ -1,0 +1,221 @@
+{
+  "protocol_id": "CB-FRL-IDS-STEP6-DATA-INTEGRITY-V2",
+  "overall_gate_status": "PASS",
+  "training_permitted": true,
+  "dataset_results": [
+    {
+      "dataset": "CICIDS2017",
+      "gate": "PASS",
+      "audit": {
+        "dataset": "CICIDS2017",
+        "raw_rows_read": 2830743,
+        "raw_binary_label_counts": {
+          "benign": 2273097,
+          "attack": 557646
+        },
+        "unique_feature_hashes": 2521664,
+        "hashes_with_repeats": 95479,
+        "repeated_rows_beyond_first": 309079,
+        "conflicting_label_hashes_excluded": 698,
+        "unique_nonconflicting_rows": 2520966,
+        "malformed_rows_skipped": 0,
+        "hash_method": "two independent pandas 64-bit hashes concatenated (128-bit)",
+        "elapsed_seconds": 185.036
+      },
+      "split": {
+        "train": {
+          "groups": 5,
+          "benign": 1394775,
+          "attack": 323820,
+          "total": 1718595
+        },
+        "validation": {
+          "groups": 1,
+          "benign": 401017,
+          "attack": 9152,
+          "total": 410169
+        },
+        "test": {
+          "groups": 2,
+          "benign": 299994,
+          "attack": 92208,
+          "total": 392202
+        },
+        "objective_score": 1.0297897375431098,
+        "constraints": {
+          "minimum_benign_each_split": 5000,
+          "minimum_attack_each_split": 5000,
+          "minimum_attack_fraction_each_split": 0.01,
+          "minimum_train_fraction_total_and_each_class": 0.55,
+          "selection_rule": "exhaustive minimum normalized class-and-size deviation"
+        }
+      },
+      "processed": {
+        "train": {
+          "input_rows": 1718595,
+          "rows": 1680884,
+          "removed_transformed_collision_rows": 37711,
+          "benign": 1357268,
+          "attack": 323616,
+          "n_parts": 35,
+          "n_features": 78
+        },
+        "validation": {
+          "input_rows": 410169,
+          "rows": 405943,
+          "removed_transformed_collision_rows": 4226,
+          "benign": 396791,
+          "attack": 9152,
+          "n_parts": 9,
+          "n_features": 78
+        },
+        "test": {
+          "input_rows": 392202,
+          "rows": 382391,
+          "removed_transformed_collision_rows": 9811,
+          "benign": 292559,
+          "attack": 89832,
+          "n_parts": 8,
+          "n_features": 78
+        },
+        "collision_policy": "Remove every row whose transformed feature vector occurs more than once anywhere in train/validation/test; no split or label is privileged.",
+        "repeated_transformed_hashes_removed": 24240,
+        "rows_in_repeated_hash_groups": 51748,
+        "cross_split_transformed_hashes_before_cleaning": 10876,
+        "label_conflicting_transformed_hashes_before_cleaning": 31,
+        "transformed_hashes_within_split_repeat": 0,
+        "transformed_hashes_cross_split": 0
+      },
+      "partitions": {
+        "client_count": 10,
+        "alphas": [
+          0.1,
+          0.5,
+          1.0
+        ],
+        "seeds": [
+          42,
+          123,
+          777,
+          2026,
+          3407,
+          11,
+          314,
+          2718,
+          9001,
+          2027
+        ],
+        "minimum_client_support": 200,
+        "partition_files": 30,
+        "single_class_clients_total": 34
+      }
+    },
+    {
+      "dataset": "CICIoT2023",
+      "gate": "PASS",
+      "audit": {
+        "dataset": "CICIoT2023",
+        "raw_rows_read": 46776700,
+        "raw_binary_label_counts": {
+          "benign": 1098191,
+          "attack": 45678509
+        },
+        "unique_feature_hashes": 21074316,
+        "hashes_with_repeats": 1885513,
+        "repeated_rows_beyond_first": 25702384,
+        "conflicting_label_hashes_excluded": 906,
+        "unique_nonconflicting_rows": 21073410,
+        "malformed_rows_skipped": 0,
+        "hash_method": "two independent pandas 64-bit hashes concatenated (128-bit)",
+        "elapsed_seconds": 3874.91
+      },
+      "split": {
+        "train": {
+          "groups": 252,
+          "benign": 489566,
+          "attack": 14113810,
+          "total": 14603376
+        },
+        "validation": {
+          "groups": 28,
+          "benign": 294174,
+          "attack": 2936447,
+          "total": 3230621
+        },
+        "test": {
+          "groups": 29,
+          "benign": 309294,
+          "attack": 2930119,
+          "total": 3239413
+        },
+        "objective_score": 1.548511109093223
+      },
+      "processed": {
+        "train": {
+          "input_rows": 420000,
+          "rows": 417753,
+          "removed_transformed_collision_rows": 2247,
+          "benign": 104714,
+          "attack": 313039,
+          "n_parts": 9,
+          "n_features": 39
+        },
+        "validation": {
+          "input_rows": 90000,
+          "rows": 89663,
+          "removed_transformed_collision_rows": 337,
+          "benign": 22439,
+          "attack": 67224,
+          "n_parts": 2,
+          "n_features": 39
+        },
+        "test": {
+          "input_rows": 90000,
+          "rows": 89523,
+          "removed_transformed_collision_rows": 477,
+          "benign": 22432,
+          "attack": 67091,
+          "n_parts": 2,
+          "n_features": 39
+        },
+        "collision_policy": "Remove every row whose transformed feature vector occurs more than once anywhere in train/validation/test; no split or label is privileged.",
+        "repeated_transformed_hashes_removed": 551,
+        "rows_in_repeated_hash_groups": 3061,
+        "cross_split_transformed_hashes_before_cleaning": 219,
+        "label_conflicting_transformed_hashes_before_cleaning": 70,
+        "transformed_hashes_within_split_repeat": 0,
+        "transformed_hashes_cross_split": 0
+      },
+      "partitions": {
+        "client_count": 10,
+        "alphas": [
+          0.1,
+          0.5,
+          1.0
+        ],
+        "seeds": [
+          42,
+          123,
+          777,
+          2026,
+          3407,
+          11,
+          314,
+          2718,
+          9001,
+          2027
+        ],
+        "minimum_client_support": 200,
+        "partition_files": 30,
+        "single_class_clients_total": 41
+      }
+    }
+  ],
+  "repair_scope": [
+    "class-support-constrained CICIDS2017 source-group split",
+    "global removal of repeated transformed feature vectors",
+    "transparent suspicious-feature decision register",
+    "regenerated train-only preprocessing and client partitions"
+  ],
+  "scientific_rule": "No model training until V2 master and independent validation are PASS."
+}

@@ -1,0 +1,26 @@
+{
+  "cuda_available": false,
+  "cuda_version": null,
+  "execution_config_sha256": "512f768aa9543331804e44f5f398c4f224208002429834d90918733aeb14604f",
+  "machine_lock": {
+    "cpu": "Intel Xeon Silver 4314",
+    "execution_device": "cpu",
+    "gpu_present": "NVIDIA A2",
+    "note": "CPU is locked for comparability with accepted historical artifacts; GPU is not used.",
+    "parallel_training_cells": 1,
+    "ram_gb": 128,
+    "server": "Dell PowerEdge R750xs 12x3.5in",
+    "storage": "14.4 TB SAS",
+    "torch_threads_per_cell": 4
+  },
+  "numpy": "2.4.6",
+  "pandas": "3.0.5",
+  "platform": "nt",
+  "python": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]",
+  "r1_gate_sha256": "7c8eb4fd14d79675907e62e7ab0c3df110af5cf9c0c53a4f3701919928a8a276",
+  "r2_gate_sha256": "e8ba78acd23b8ba4a5b7fb20b26632794164847d1ff91daf5e2a6ce663ef2c0d",
+  "r3_gate_sha256": "0a98879650211eb587730d8446599edb26e8a2402b6ca16b3a152a51514799b6",
+  "scipy": "1.17.1",
+  "sklearn": "1.9.0",
+  "torch": "2.13.0+cpu"
+}

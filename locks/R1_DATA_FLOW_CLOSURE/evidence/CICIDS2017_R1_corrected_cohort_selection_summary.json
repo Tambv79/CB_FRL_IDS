@@ -1,0 +1,17 @@
+{
+  "train": {
+    "benign": 1394775,
+    "attack": 323820,
+    "total": 1718595
+  },
+  "validation": {
+    "benign": 401017,
+    "attack": 9152,
+    "total": 410169
+  },
+  "test": {
+    "benign": 299994,
+    "attack": 92208,
+    "total": 392202
+  }
+}

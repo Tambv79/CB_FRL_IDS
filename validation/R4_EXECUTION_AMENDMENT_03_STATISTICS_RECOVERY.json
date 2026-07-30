@@ -1,0 +1,20 @@
+{
+  "amendment_id": "R4-EXEC-AMEND-03-STATISTICS-RECOVERY",
+  "created_epoch": 1785380385.747771,
+  "fixes": [
+    "authoritative manifest-based cell resolution",
+    "stage-level output validation",
+    "statistics-only fail-fast preflight",
+    "full traceback capture"
+  ],
+  "preserved_evidence": {
+    "privacy_evaluations": 480,
+    "training_cells": 1720
+  },
+  "reason": "V5 analysis reconstructed beta=1.0 directory names as b1 instead of using locked manifest IDs b1.0.",
+  "recommended_from_stage": "communication",
+  "scientific_effect": "none on trained models, predictions, selection, communication, robustness, or privacy outputs",
+  "scope": "analysis, final validation, finalization only; no training or privacy reruns",
+  "stage_1_2_reuse_errors": [],
+  "status": "LOCKED_BEFORE_STATISTICS_RERUN"
+}

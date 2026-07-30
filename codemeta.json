@@ -1,0 +1,30 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "CB-FRL-IDS Reproducibility Repository",
+  "description": "CB-FRL-IDS: Communication-Budgeted Pre-Upload Policy-Update Selection for Federated Network Intrusion Detection",
+  "codeRepository": "https://github.com/USERNAME/CB-FRL-IDS",
+  "url": "https://github.com/USERNAME/CB-FRL-IDS",
+  "version": "1.0.0",
+  "datePublished": "2026-07-30",
+  "license": "https://spdx.org/licenses/MIT",
+  "programmingLanguage": "Python",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Van-Tam",
+      "familyName": "Bui",
+      "id": "https://orcid.org/0009-0007-0064-266X"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Van-Hung",
+      "familyName": "Le"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Dac-Nhuong",
+      "familyName": "Le"
+    }
+  ]
+}

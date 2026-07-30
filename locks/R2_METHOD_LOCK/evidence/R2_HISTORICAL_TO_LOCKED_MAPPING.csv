@@ -1,0 +1,10 @@
+﻿item,historical,R2_lock,status
+Utility,marginal J_local-J_global in code; manuscript also contained an absolute-score equation,marginal J_local-J_global only; same subset and threshold 0.5,CLOSED
+Static eligibility,raw utility > 0,finite + support + both classes + self-fit,CLOSED
+Ranking eligibility,raw utility > 0 plus priority >0,separate method-specific positive priority gate,CLOSED
+Residual feasibility,iterative used+wire<=budget,retained and named iterative feasibility,CLOSED
+Fallback,"force highest raw utility that fits, even if non-positive",disabled; empty round keeps global model unchanged,CLOSED
+Cost score,cost in normalized score and denominator,CB-Score removes second division; historical form retained as ablation,CLOSED
+Novelty,disabled primary but described in core,removed from core and Algorithm 1,CLOSED
+Budget name,communication budget,selected-update uplink budget; E2E separately accounted,CLOSED
+Full denominator,all K candidates,"all K candidates, stated once",CLOSED

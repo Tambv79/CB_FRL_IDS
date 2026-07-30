@@ -1,0 +1,13 @@
+{
+  "amendment_id": "R4-EXEC-AMEND-04-SELF-PROCESS-GUARD",
+  "created_epoch": 1785380385.747771,
+  "guard_rule": "exclude current PID and same-orchestrator ancestor PIDs; reject every separate R4 worker or orchestrator",
+  "preserved_evidence": {
+    "privacy_evaluations": 480,
+    "training_cells": 1720
+  },
+  "reason": "V6 preflight incorrectly classified its own Windows venv/base-interpreter orchestrator ancestors as concurrent R4 processes.",
+  "scientific_effect": "none; no experimental artifact, method, manifest, threshold, hypothesis, or statistic is altered",
+  "scope": "process-safety guard only; analysis, validation, and finalization remain unchanged",
+  "status": "LOCKED_BEFORE_V7_EXECUTION"
+}

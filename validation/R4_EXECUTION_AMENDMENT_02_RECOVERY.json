@@ -1,0 +1,32 @@
+{
+  "actual_hardware_file": "validation/R4_EXECUTED_ENVIRONMENT_ACTUAL.json",
+  "amendment_id": "R4-EXEC-AMEND-02-RECOVERY",
+  "declared_machine_lock": {
+    "cpu": "Intel Xeon Silver 4314",
+    "execution_device": "cpu",
+    "gpu_present": "NVIDIA A2",
+    "note": "CPU is locked for comparability with accepted historical artifacts; GPU is not used.",
+    "parallel_training_cells": 1,
+    "ram_gb": 128,
+    "server": "Dell PowerEdge R750xs 12x3.5in",
+    "storage": "14.4 TB SAS",
+    "torch_threads_per_cell": 4
+  },
+  "original_failure_sha256": "d486457f43832391c7ad5f617e738286eb49f904a9c3a97560f81a8ee08869ec",
+  "preserved_completed_cells": {
+    "feature_sensitivity": 20,
+    "heterogeneity": 240,
+    "natural_partition": 60,
+    "ood_stress": 60,
+    "primary": 980
+  },
+  "resume_from": "robustness",
+  "root_cause": [
+    "robustness execution manifest omitted rounds column",
+    "forged-utility clean condition did not assign malicious clients",
+    "Python built-in hash was process-dependent for analysis seeds",
+    "declared Dell hardware did not match actual laptop execution"
+  ],
+  "scope": "execution correction only; no change to R2 method, R3 scientific design, seeds, datasets, rounds, thresholds or hypotheses",
+  "status": "APPROVED_FOR_RECOVERY_RUN"
+}

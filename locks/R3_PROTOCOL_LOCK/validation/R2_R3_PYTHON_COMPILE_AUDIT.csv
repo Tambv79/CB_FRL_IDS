@@ -1,0 +1,6 @@
+﻿package,file,status,stderr
+CB_FRL_IDS_R2_METHOD_LOCK,tests/test_r2_method_lock.py,PASS,
+CB_FRL_IDS_R2_METHOD_LOCK,scripts/run_r2_validation.py,PASS,
+CB_FRL_IDS_R2_METHOD_LOCK,code/r2_locked_method.py,PASS,
+CB_FRL_IDS_R3_PROTOCOL_LOCK,scripts/validate_r3_protocol.py,PASS,
+CB_FRL_IDS_R3_PROTOCOL_LOCK,code/r2_locked_method.py,PASS,

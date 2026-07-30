@@ -1,0 +1,51 @@
+{
+  "record_id": "STEP7-TO-STEP7B-AMENDMENT-RECONSTRUCTED-FROM-AUTHORITATIVE-ARTIFACTS",
+  "status": "EVIDENCE_RECONSTRUCTED_NO_MEMORY_INFERENCE",
+  "timeline": [
+    {
+      "time": "2026-07-21T07:14:00",
+      "event": "Step7 V1 invalidated",
+      "observed_before_change": [
+        "80/80 structurally complete",
+        "all utilities zero",
+        "identical method metrics/model hashes"
+      ],
+      "change": "parameter copy isolation and scientific validators; rerun as V2",
+      "source": "STEP7_V1_INVALIDATION_RECORD.json"
+    },
+    {
+      "time": "2026-07-21T12:15:00",
+      "event": "Step7 V2 scientific audit",
+      "observed_before_change": [
+        "CICIoT valid trade-off",
+        "CICIDS file-disjoint severe cross-capture failure",
+        "Utility-Only stronger than CB on CICIoT mean metrics"
+      ],
+      "change": "insert Step7B coverage-preserving CICIDS protocol; preserve file-disjoint as OOD evidence",
+      "source": "STEP7_V2_SCIENTIFIC_AUDIT_AND_PLAN_AMENDMENT_VI.md"
+    },
+    {
+      "time": "2026-07-21T13:27:00",
+      "event": "Step7B protocol locked before results",
+      "change": "coverage-preserving row-hash-disjoint split, train-only preprocessing, 40 CICIDS cells, unchanged learner/budget/seeds",
+      "source": "STEP7B_PROTOCOL_LOCK_VI.md"
+    },
+    {
+      "time": "2026-07-21T16:14:00",
+      "event": "Step7B accepted after validation",
+      "observed_after_change": [
+        "40/40 cells PASS",
+        "primary evidence gap closed",
+        "cost-aware score still not universally superior"
+      ],
+      "change": "Step8 cost relevance audit added; no adverse result discarded",
+      "source": "STEP7B_ACCEPTANCE_AND_STEP8_AMENDMENT_VI.md"
+    }
+  ],
+  "holdout_boundary": "Step7B protocol states test data inaccessible until validation configuration lock. No stronger preregistration claim is made.",
+  "manuscript_classification": {
+    "CICIoT2023": "revision protocol-locked primary analysis using R1-authoritative data flow",
+    "CICIDS2017_coverage": "protocol-locked post-amendment primary analysis",
+    "CICIDS2017_file_disjoint": "cross-capture/OOD stress evidence retained as adverse result"
+  }
+}

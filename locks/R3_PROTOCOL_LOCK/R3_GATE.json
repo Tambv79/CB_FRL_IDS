@@ -1,0 +1,23 @@
+{
+  "phase": "R3 — Protocol Lock",
+  "status": "PASS_PROTOCOL_LOCKED_READY_FOR_R4_PACKAGE_BUILD",
+  "protocol_id": "CB-PREUPLOAD-SELECT-R3-PROTOCOL-LOCK-V1",
+  "method_dependency": "PASS_METHOD_LOCKED",
+  "raw_paths_confirmed": [
+    "D:\\DATASETS\\CICIDS2017",
+    "D:\\DATASETS\\CICIoT2023"
+  ],
+  "cell_counts": {
+    "primary": 980,
+    "heterogeneity": 240,
+    "natural_partition": 60,
+    "OOD_stress": 60,
+    "privacy_attacker": 480,
+    "robustness": 360,
+    "feature_sensitivity": 20
+  },
+  "hypotheses": 108,
+  "new_results_viewed": false,
+  "governance": "Any change after test access requires a new protocol ID, amendment log and checksum.",
+  "next_phase": "R4 one-shot experiment package construction and execution; no manuscript revision before locked results"
+}

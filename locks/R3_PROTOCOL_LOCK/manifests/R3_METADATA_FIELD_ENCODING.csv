@@ -1,0 +1,15 @@
+﻿view,field,type,bytes,transformation,range,DP
+Raw,client_id,uint16,2,none,0..9,no
+Raw,round,uint16,2,none,0..29,no
+Raw,utility,float32,4,marginal utility,finite real,no
+Raw,wire_bytes,uint64,8,exact serialized wire bytes,>0,no
+Raw,n_fit,uint32,4,exact,>=180,no
+Raw,eligible,uint8,1,locked static eligibility,0/1,no
+Noisy-Quantized,utility,float32,4,"clip[-1,1]+Gaussian sigma0.1",unbounded after noise,no
+Noisy-Quantized,wire_bytes,uint64,8,round nearest 1024 bytes,>=1024,no
+Noisy-Quantized,n_fit,uint32,4,round nearest 1000,>=0,no
+No-Size,utility,float32,4,"clip[-1,1]+Gaussian sigma0.2",unbounded after noise,no
+No-Size,wire_bytes,uint64,8,round nearest 4096 bytes,>=4096,no
+No-Size,n_fit,omitted,0,omitted,NA,no
+Minimal-Bucketed,utility_bucket,uint8,1,tertile bucket,0..2,no
+Minimal-Bucketed,cost_bucket,uint8,1,tertile bucket,0..2,no

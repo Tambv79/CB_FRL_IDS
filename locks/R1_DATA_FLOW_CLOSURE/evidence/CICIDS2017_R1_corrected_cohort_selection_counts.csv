@@ -1,0 +1,7 @@
+split,label,source_class,selected_rows
+test,0,benign,299994
+test,1,attack,92208
+train,0,benign,1394775
+train,1,attack,323820
+validation,0,benign,401017
+validation,1,attack,9152

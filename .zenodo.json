@@ -1,0 +1,32 @@
+{
+  "title": "CB-FRL-IDS Reproducibility Repository",
+  "description": "CB-FRL-IDS: Communication-Budgeted Pre-Upload Policy-Update Selection for Federated Network Intrusion Detection",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Bui, Van-Tam",
+      "orcid": "0009-0007-0064-266X"
+    },
+    {
+      "name": "Le, Van-Hung"
+    },
+    {
+      "name": "Le, Dac-Nhuong"
+    }
+  ],
+  "access_right": "open",
+  "license": "mit-license",
+  "keywords": [
+    "federated learning",
+    "network intrusion detection",
+    "client selection",
+    "communication efficiency"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/USERNAME/CB-FRL-IDS",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "captured_at_epoch": 1785326703.8072553,
+  "cuda_available": false,
+  "hostname": "redacted_for_public_release",
+  "logical_cpu_count": 8,
+  "physical_cpu_count": 6,
+  "platform": "Windows-10-10.0.26200-SP0",
+  "processor_platform": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+  "python": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]",
+  "ram_gb": 7.676,
+  "torch_version": "2.13.0+cpu",
+  "windows_cim": {
+    "computer": {
+      "Manufacturer": "HP",
+      "Model": "HP Pavilion Laptop 14-dv2xxx",
+      "TotalPhysicalMemory": 8242282496
+    },
+    "cpu": {
+      "Name": "12th Gen Intel(R) Core(TM) i3-1215U",
+      "NumberOfCores": 6,
+      "NumberOfLogicalProcessors": 8
+    }
+  }
+}

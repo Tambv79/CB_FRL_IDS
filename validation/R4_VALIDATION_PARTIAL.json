@@ -1,0 +1,35 @@
+{
+  "counts": {
+    "feature_sensitivity": {
+      "expected": 20,
+      "valid": 20
+    },
+    "heterogeneity": {
+      "expected": 240,
+      "valid": 240
+    },
+    "natural_partition": {
+      "expected": 60,
+      "valid": 60
+    },
+    "ood_stress": {
+      "expected": 60,
+      "valid": 60
+    },
+    "primary": {
+      "expected": 980,
+      "valid": 980
+    },
+    "privacy": {
+      "expected": 480,
+      "valid": 480
+    },
+    "robustness": {
+      "expected": 360,
+      "valid": 360
+    }
+  },
+  "errors": [],
+  "mode": "partial",
+  "status": "PASS"
+}

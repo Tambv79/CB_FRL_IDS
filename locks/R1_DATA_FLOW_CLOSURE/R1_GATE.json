@@ -1,0 +1,29 @@
+{
+  "phase": "R1 \u2014 Data-flow Closure",
+  "status": "PASS_DATA_FLOW_CLOSED_WITH_LEGACY_METADATA_SUPERSEDED",
+  "CICIoT2023": {
+    "raw_rows": 46776700,
+    "unique_feature_hashes": 21074316,
+    "conflicting_hashes_removed": 906,
+    "unique_nonconflicting": 21073410,
+    "deterministic_cohort": 600000,
+    "final_rows": 596939,
+    "retention_of_unique_nonconflicting_percent": 2.832664480973891,
+    "sampling_random": false,
+    "source_group_overlap": 0,
+    "transformed_overlap_after_cleaning": 0
+  },
+  "CICIDS2017": {
+    "raw_rows": 2830743,
+    "unique_feature_hashes": 2521664,
+    "conflicting_hashes_removed": 698,
+    "unique_nonconflicting": 2520966,
+    "cohort_cap": null,
+    "final_rows": 2469218,
+    "transformed_rows_removed": 51748,
+    "legacy_cohort_summary_status": "stale after split repair; superseded by R1 corrected files derived from cap=null and repaired split manifest"
+  },
+  "legacy_manifest_mismatches": 13,
+  "scientific_decision": "R1 data-flow is closed. Legacy Step6 metadata/hash manifests are not authoritative after repair; R1 evidence and hashes supersede them. Method changes and experiments remain prohibited until R2 passes.",
+  "next_phase": "R2 \u2014 Method Lock: utility, eligibility, fallback, budget semantics, novelty removal and code-equation-algorithm agreement"
+}

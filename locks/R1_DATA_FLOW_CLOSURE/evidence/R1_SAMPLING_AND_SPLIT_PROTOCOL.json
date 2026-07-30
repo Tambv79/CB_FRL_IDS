@@ -1,0 +1,28 @@
+{
+  "source_group_split": {
+    "occurs_before_cohort_selection": true,
+    "group_definition": "relative_file",
+    "algorithm": "multiple randomized greedy starts minimizing normalized class-and-size deviation",
+    "seed": 42,
+    "group_disjoint": true
+  },
+  "CICIoT2023_cohort": {
+    "cap": 600000,
+    "split_targets": {
+      "train": 420000,
+      "validation": 90000,
+      "test": 90000
+    },
+    "target_benign_fraction": 0.25,
+    "balance_by_source_class": true,
+    "selection_rule": "within split x label x source_class, ORDER BY row_hash LIMIT quota",
+    "random_sampling": false,
+    "sampling_seed": "not applicable",
+    "stability_over_sampling_seeds": "not applicable because cohort membership is deterministic for fixed raw files, split manifest and hash implementation"
+  },
+  "CICIDS2017_cohort": {
+    "cap": null,
+    "selection_rule": "all unique nonconflicting rows retained",
+    "random_sampling": false
+  }
+}

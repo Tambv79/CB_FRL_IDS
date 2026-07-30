@@ -1,0 +1,99 @@
+protocol_id: CB-PREUPLOAD-SELECT-R3-PROTOCOL-LOCK-V1
+status: LOCKED_BEFORE_NEW_RESULTS
+method_lock_dependency:
+  protocol: CB-PREUPLOAD-SELECT-R2-METHOD-LOCK-V1
+  required_gate: PASS
+raw_dataset_paths_confirmed_by_author:
+  CICIDS2017: D:\DATASETS\CICIDS2017
+  CICIoT2023: D:\DATASETS\CICIoT2023
+data_authority:
+  R1_gate: PASS_DATA_FLOW_CLOSED_WITH_LEGACY_METADATA_SUPERSEDED
+  CICIDS2017_primary: coverage-preserving R1-authoritative protocol-locked post-amendment analysis
+  CICIoT2023_primary: R1-authoritative revision protocol-locked analysis
+  CICIDS2017_file_disjoint: cross-capture OOD stress evidence
+primary_design:
+  datasets: [CICIDS2017_COVERAGE_R1, CICIoT2023_R1]
+  client_count_K: 10
+  alpha_dir: 0.5
+  rounds: 30
+  paired_seeds: [42, 123, 777, 2026, 3407, 11, 314, 2718, 9001, 2027]
+  budget_ratios_beta: [0.1, 0.2, 0.4, 0.6, 0.8, 1.0]
+  methods: [Full-Contextual, Random-Budget, Cost-Only, Utility-Only, Utility-Cost-Ratio, CB-Score, Historical-DoubleCost, Oort-Style-Adapted, Oracle-Score-Exact]
+  expected_cells: 980
+heterogeneity:
+  dirichlet_alpha_sensitivity: [0.1, 0.5, 1.0]
+  beta_for_sensitivity: 0.4
+  expected_additional_cells_excluding_primary_alpha: 240
+  natural_partition:
+    dataset: CICIoT2023
+    unit: source_group
+    assignment: deterministic balanced bin packing to K=10 without splitting a source group
+    expected_cells: 60
+ood_stress:
+  dataset: CICIDS2017
+  protocol: file_disjoint_cross_capture
+  beta: 0.4
+  expected_cells: 60
+thresholds:
+  utility_proxy_threshold: 0.5
+  primary_final_threshold: method-specific validation threshold maximizing F1 subject to FPR<=0.05
+  shared_threshold_analysis: Full-Contextual validation-locked threshold applied unchanged to all matched methods for the same dataset and seed
+  fixed_threshold_sensitivity: 0.5
+  test_access: one prediction export after all configuration and thresholds are locked
+endpoints:
+  primary_detection: [F1, PR-AUC]
+  safety: [FPR, false_positives_per_10000_benign]
+  secondary: [ROC-AUC, precision, recall]
+  communication: [selected_update_uplink_bytes, metadata_wire_bytes, downlink_broadcast_bytes, downlink_K_unicast_bytes, E2E_broadcast_bytes, E2E_K_unicast_bytes]
+  behavior: [selected_client_count, static_eligible_count, budget_utilization, empty_round_rate]
+  runtime: [sum_client_CPU_seconds, max_client_seconds_simulated_parallel_critical_path, server_selection_seconds, aggregation_seconds, wall_clock_seconds]
+communication_comparisons:
+  same_round: final and per-round metrics through round 30
+  same_cumulative_bytes: linear interpolation on 20 common points over the overlapping cumulative E2E-broadcast range
+  communication_to_target: validation bytes to 90% and 95% of Full-Contextual final validation F1 and PR-AUC; report not_reached
+inference:
+  paired_bootstrap_resamples: 20000
+  exact_sign_flip_test: true
+  f1_noninferiority_margin: 0.02
+  pr_auc_noninferiority_margin: 0.02
+  fpr_safety_margin_absolute: 0.0025
+  fpr_safety_operational_unit: at most 25 additional false positives per 10000 benign flows
+  margin_sensitivity:
+    F1: [0.01, 0.02, 0.03]
+    PR-AUC: [0.01, 0.02, 0.03]
+    FPR: [0.001, 0.0025, 0.005, 0.01]
+  holm_families:
+    F1_noninferiority_CB_vs_Full: 12
+    PRAUC_noninferiority_CB_vs_Full: 12
+    FPR_safety_CB_vs_Full: 12
+    same_budget_F1_CB_vs_primary_competitors: 36
+    same_budget_PRAUC_CB_vs_primary_competitors: 36
+  primary_competitors: [Utility-Only, Utility-Cost-Ratio, Oort-Style-Adapted]
+  report: [raw_p, Holm_adjusted_p, paired_effect_dz, wins_losses_ties, confidence_intervals]
+privacy:
+  views: ['Raw', 'Noisy-Quantized', 'No-Size', 'Minimal-Bucketed']
+  attackers: ['LogisticRegression', 'RandomForest', 'MLP']
+  targets: ['client_size_above_seed_median', 'attack_ratio_above_seed_median']
+  split: five-fold group-disjoint by client_id, repeated across ten locked seeds
+  expected_attacker_cells: 480
+  claim_boundary: empirical pre-upload metadata leakage only; no formal privacy guarantee
+robustness:
+  datasets: [CICIDS2017_COVERAGE_R1, CICIoT2023_R1]
+  core_factorial: Full_or_CB-Score x FedAvg_or_Norm-Clipped-Averaging x clean_or_label-flip_or_sign-flip
+  metadata_falsification: forged utility evaluated separately for CB-Score
+  expected_cells: 360
+  required_diagnostics: [malicious_selection_rate, malicious_budget_fraction, benign_and_malicious_reported_utility, update_norms, cosine_directions, attack_success_rate]
+  claim_boundary: specified attacks only; no Byzantine guarantee
+feature_sensitivity:
+  CICIDS2017_remove_flagged_features: 10
+  expected_cells: 20
+novelty:
+  core: excluded
+  optional_extension: not part of R3 primary run; requires a future separately checksummed protocol
+execution_governance:
+  one_shot_package_required_for_R4: true
+  preflight: [raw_path, R1_hashes, assignment_hashes, disk_space, dependencies, syntax, unit, integration]
+  checkpoint_resume: per_round_and_per_cell
+  fail_fast_before_training: true
+  no_protocol_change_after_test_view: true
+  amendment_requires_author_approval_and_new_protocol_checksum: true

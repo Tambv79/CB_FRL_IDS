@@ -1,0 +1,9 @@
+{
+  "bootstrap_resamples": 20000,
+  "bootstrap_seed_derivation": "SHA-256 stable uint32",
+  "cell_id_resolution": "locked primary manifest, no float-based reconstruction",
+  "execution_amendment_id": "R4-EXEC-AMEND-03-STATISTICS-RECOVERY",
+  "hypotheses": 108,
+  "protocol_id": "CB-PREUPLOAD-SELECT-R4-EXECUTION-V1.1-DISK-CALIBRATED",
+  "status": "PASS"
+}
