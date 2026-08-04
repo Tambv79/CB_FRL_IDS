@@ -1,30 +1,37 @@
 {
-  "title": "CB-FRL-IDS Reproducibility Repository",
-  "description": "CB-FRL-IDS: Communication-Budgeted Pre-Upload Policy-Update Selection for Federated Network Intrusion Detection",
+  "title": "CB-FedSelect: Reproducibility Artifacts for Communication-Budgeted Pre-Upload Client Selection for Federated Intrusion Detection",
   "upload_type": "software",
+  "publication_date": "2026-08-04",
+  "version": "1.1.0",
+  "description": "Versioned code, manifests, processed metadata, seed-level results, targeted-validity analyses, and validation records for CB-FedSelect. Raw third-party datasets are not redistributed.",
   "creators": [
     {
       "name": "Bui, Van-Tam",
-      "orcid": "0009-0007-0064-266X"
+      "orcid": "0009-0007-0064-266X",
+      "affiliation": "Hai Phong University; Thuyloi University"
     },
     {
-      "name": "Le, Van-Hung"
+      "name": "Le, Van-Hung",
+      "affiliation": "Thuyloi University"
     },
     {
-      "name": "Le, Dac-Nhuong"
+      "name": "Le, Dac-Nhuong",
+      "affiliation": "Hai Phong University"
     }
   ],
-  "access_right": "open",
-  "license": "mit-license",
   "keywords": [
     "federated learning",
     "network intrusion detection",
     "client selection",
-    "communication efficiency"
+    "communication efficiency",
+    "non-inferiority testing",
+    "metadata leakage"
   ],
+  "license": "mit-license",
+  "access_right": "open",
   "related_identifiers": [
     {
-      "identifier": "https://github.com/USERNAME/CB-FRL-IDS",
+      "identifier": "https://github.com/Tambv79/CB_FRL_IDS",
       "relation": "isSupplementTo",
       "scheme": "url"
     }
