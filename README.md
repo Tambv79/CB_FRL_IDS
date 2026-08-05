@@ -83,3 +83,8 @@ Use the **Cite this repository** panel generated from `CITATION.cff`.
 - Raw third-party datasets: original provider terms apply; no raw data are redistributed.
 
 See `LICENSE` and `NOTICE.md`.
+
+## Manuscript presentation alignment
+
+The final pre-submission presentation alignment is documented in [`docs/MANUSCRIPT_ALIGNMENT_v1.1.1.md`](docs/MANUSCRIPT_ALIGNMENT_v1.1.1.md). It updates the workflow figure and LaTeX float placement only; all experimental evidence and scientific conclusions remain unchanged.
+
