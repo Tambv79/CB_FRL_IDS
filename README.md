@@ -14,8 +14,9 @@ The evidence does **not** establish a universally optimal selector, a formal pri
 
 - **v1.0.0**: immutable legacy provenance for the primary federated experiment and privacy/robustness artifact under the historical repository naming.
 - **v1.1.0**: CB-FedSelect targeted-validity artifact adding 200 sensitivity cells, 30 centralized sanity baselines, operational-prevalence and false-alert-budget analyses, score-direction diagnostics, natural-source threshold diagnostics, and manuscript-aligned metadata.
+- - **v1.2.0**: advisor-compliance evidence synchronization adding corrected pooled-rate operational PPV/NPV, bounded robustness confidence intervals, corrected client-group privacy distributions, the deterministic CICIDS2017 label/preprocessing audit, and the final evidence-backed compliance matrix. No new primary FL training or post-hoc retuning was performed.
 
-Version 1.1.0 supplements rather than rewrites the v1.0.0 provenance.
+Version 1.2.0 supplements rather than rewrites the v1.0.0 and v1.1.0 provenance. The primary experiment remains unchanged; v1.2.0 synchronizes the corrected advisor-compliance evidence and machine-readable reporting artifacts.
 
 ## Repository contents
 
@@ -29,7 +30,7 @@ Version 1.1.0 supplements rather than rewrites the v1.0.0 provenance.
 - `data/`: acquisition and expected-structure instructions; no raw data are redistributed.
 - `docs/`: reproducibility, data-availability, licensing, and release guidance.
 
-The complete primary seed-level artifact is distributed through release `v1.0.0`. The targeted-validity evidence is distributed through release `v1.1.0`. Large generated artifacts are kept in GitHub Releases rather than committed as thousands of small Git objects.
+The complete primary seed-level artifact is distributed through release `v1.0.0`. The targeted-validity evidence is distributed through release `v1.1.0`. Large generated artifacts are kept in GitHub Releases rather than committed as thousands of small Git objects. The advisor-compliance evidence synchronized for the final manuscript is distributed through release `v1.2.0`.
 
 ## Quick verification
 
