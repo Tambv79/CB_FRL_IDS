@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import csv
 import json
-import sys
 from pathlib import Path
 
 import yaml
@@ -21,6 +20,9 @@ EXPECTED = {
 REPO_URL = "https://github.com/Tambv79/CB_FRL_IDS"
 METHOD = "CB-FedSelect"
 MANUSCRIPT_TITLE = "Communication-Budgeted Pre-Upload Client Selection for Federated Intrusion Detection"
+CURRENT_VERSION = "1.2.0"
+RELEASE_DATE = "2026-08-18"
+
 PUBLIC_METADATA_FILES = [
     "README.md",
     "CITATION.cff",
@@ -28,12 +30,14 @@ PUBLIC_METADATA_FILES = [
     "codemeta.json",
     "docs/DATA_AVAILABILITY.md",
 ]
+
 FORBIDDEN_PLACEHOLDERS = (
     "REPLACE_WITH_GITHUB_USERNAME",
     "github.com/USERNAME",
     "github.com/YOUR_USERNAME",
     "https://github.com/OWNER/",
 )
+
 FORBIDDEN_PUBLIC_LEGACY_PHRASES = (
     "# CB-FRL-IDS",
     "CB-FRL-IDS Reproducibility Repository",
@@ -83,8 +87,10 @@ def main() -> int:
             errors.append("CITATION.cff must use cff-version 1.2.0")
         if len(cff.get("authors", [])) != 3:
             errors.append("CITATION.cff author count must be 3")
-        if cff.get("version") != "1.1.0":
-            errors.append("CITATION.cff version must be 1.1.0")
+        if str(cff.get("version")) != CURRENT_VERSION:
+            errors.append(f"CITATION.cff version must be {CURRENT_VERSION}")
+        if str(cff.get("date-released")) != RELEASE_DATE:
+            errors.append(f"CITATION.cff date-released must be {RELEASE_DATE}")
         if cff.get("repository-code") != REPO_URL or cff.get("url") != REPO_URL:
             errors.append("CITATION.cff repository URL mismatch")
         if METHOD not in str(cff.get("title", "")):
@@ -95,10 +101,24 @@ def main() -> int:
     for rel in [".zenodo.json", "codemeta.json"]:
         try:
             data = json.loads((root / rel).read_text(encoding="utf-8"))
-            if str(data.get("version")) != "1.1.0":
-                errors.append(f"{rel} version must be 1.1.0")
+            if str(data.get("version")) != CURRENT_VERSION:
+                errors.append(f"{rel} version must be {CURRENT_VERSION}")
         except Exception as exc:
             errors.append(f"invalid {rel}: {exc}")
+
+    try:
+        zenodo = json.loads((root / ".zenodo.json").read_text(encoding="utf-8"))
+        if str(zenodo.get("publication_date")) != RELEASE_DATE:
+            errors.append(f".zenodo.json publication_date must be {RELEASE_DATE}")
+    except Exception:
+        pass
+
+    try:
+        codemeta = json.loads((root / "codemeta.json").read_text(encoding="utf-8"))
+        if str(codemeta.get("datePublished")) != RELEASE_DATE:
+            errors.append(f"codemeta.json datePublished must be {RELEASE_DATE}")
+    except Exception:
+        pass
 
     try:
         final = json.loads((root / "validation/R4_VALIDATION_FINAL.json").read_text(encoding="utf-8"))
@@ -112,13 +132,16 @@ def main() -> int:
         for rel in PUBLIC_METADATA_FILES
         if (root / rel).is_file()
     )
+
     for token in FORBIDDEN_PLACEHOLDERS:
         if token in combined:
             errors.append(f"public metadata placeholder remains: {token}")
+
     for phrase in FORBIDDEN_PUBLIC_LEGACY_PHRASES:
         if phrase in combined:
             errors.append(f"legacy public scientific naming remains: {phrase}")
-    for required_text in [METHOD, MANUSCRIPT_TITLE, REPO_URL, "1.1.0"]:
+
+    for required_text in [METHOD, MANUSCRIPT_TITLE, REPO_URL, CURRENT_VERSION]:
         if required_text not in combined:
             errors.append(f"required public metadata missing: {required_text}")
 
