@@ -4,8 +4,8 @@
   "name": "CB-FedSelect",
   "description": "Reproducibility artifacts for communication-budgeted pre-upload client selection in federated intrusion detection.",
   "codeRepository": "https://github.com/Tambv79/CB_FRL_IDS",
-  "version": "1.1.0",
-  "datePublished": "2026-08-04",
+  "version": "1.2.0",
+  "datePublished": "2026-08-18",
   "license": "https://spdx.org/licenses/MIT",
   "author": [
     {
