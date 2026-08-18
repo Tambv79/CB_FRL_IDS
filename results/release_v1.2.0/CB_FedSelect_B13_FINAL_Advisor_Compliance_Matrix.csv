@@ -1,0 +1,20 @@
+id,requirement_group,status,evidence_basis
+1,Metadata / eligibility / byte accounting,CLOSED,"13/17-B metadata schemas, client-local eligibility, support-count locality and metadata-falsification boundary are explicit."
+2,Relative vs absolute budgets; cost trust,CLOSED,Relative benchmark caps and 50/100/200/400 kB operator caps are separated; cost under-reporting is measured.
+3,Exact-surrogate oracle consistency,CLOSED,Same-state exact-minus-greedy diagnostics and runtime interpretation are reconciled.
+4,Bounded robustness confidence intervals,CLOSED,"Authoritative V5 36-cell table exposes bounded percentile-bootstrap CIs for F1, PR-AUC, FPR and malicious share of selected uplink."
+5,Label-flipping implementation,CLOSED,Threat model matches minibatch-stochastic Bernoulli p=0.5 implementation.
+6,Operational PPV aggregation,CLOSED,R9C raw seedwise TPR/FPR were re-aggregated; pooled-rate PPV/NPV include Full and CB beta 0.2/0.4 with a separate seedwise companion.
+7,Actual execution hardware,CLOSED,HP Pavilion i3-1215U CPU-only evidence provenance is separated from Dell deployment/runtime reference hardware.
+8,Deterministic Oort baseline,CLOSED,120 deterministic-Oort cells use fixed compute/link traces; no wall-clock ranking claim.
+9,Learning curves / same communication / targets,CLOSED,"No interpolation; 90/95/98/99% targets, 3-round persistence, one-based rounds and paired checkpoint uncertainty are retained."
+10,Offline statistics vs deployable protocol,CLOSED,"Offline preprocessing, class weighting and calibration are separated from online admission communication."
+11,Non-inferiority margin 0.02 provenance,CLOSED,CB-PREUPLOAD-SELECT-R3-PROTOCOL-LOCK-V1 and lock-before-results wording are retained; 0.01/0.02/0.03 sensitivity remains visible.
+12,Privacy pseudo-replication / client-group distribution,CLOSED,"V5 provides 48 corrected aggregate OOF files; 480 per-client-group AUC rows are emitted and source 2,000-resample client-group-bootstrap CIs are preserved."
+13,Privacy attack reproducibility,CLOSED,Exactly 2×4×3×2×10=480 evaluations; four views only; fold-local bucket cutpoints; no outer-test orientation.
+14,Post-hoc 200-config interpretation,CLOSED,Sensitivity remains diagnostic/non-confirmatory and does not retune the focal method.
+15,Robustness / metadata-trust boundary,CLOSED,Selector and aggregator layers remain separate; utility/cost/eligibility falsification boundaries are explicit.
+16,CICIDS2017 interpretation / deterministic audit,CLOSED,"R1 closes raw-label→binary mapping, train-only preprocessing, split/hash consistency and ordered 78-feature manifest without retraining."
+17,JISA positioning / systems evidence,CLOSED,"Protocol/system-security framing, absolute caps, localhost byte-identity prototype and bounded claims are retained."
+18,Communication accounting terminology/models,CLOSED,"Modeled protocol-level bytes, broadcast-equivalent and K-unicast accounting, overhead sensitivity and scope exclusions are explicit."
+19,Reproducibility / AI / structure / final archival submission,PARTIAL - A9/A10 EXTERNAL,Scientific/reporting evidence is synchronized; immutable GitHub v1.2.0 and Zenodo DOI/software citation remain required before final submission lock.
