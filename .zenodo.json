@@ -1,7 +1,7 @@
 {
   "title": "CB-FedSelect: Reproducibility Artifacts for Communication-Budgeted Pre-Upload Client Selection for Federated Intrusion Detection",
   "upload_type": "software",
-  "publication_date": "2026-08-17",
+  "publication_date": "2026-08-18",
   "version": "1.2.0",
   "description": "Versioned code, manifests, processed metadata, seed-level results, bounded robustness analyses, corrected client-group privacy evidence, operational-prevalence analyses, CICIDS2017 deterministic audit, and validation records for CB-FedSelect. Raw third-party datasets are not redistributed.",
   "creators": [
