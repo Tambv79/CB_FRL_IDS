@@ -23,7 +23,7 @@ keywords:
   - non-inferiority testing
   - metadata leakage
 preferred-citation:
-  type: article
+  type: unpublished
   title: "Communication-Budgeted Pre-Upload Client Selection for Federated Intrusion Detection"
   authors:
     - family-names: Bui
@@ -33,5 +33,4 @@ preferred-citation:
       given-names: Van-Hung
     - family-names: Le
       given-names: Dac-Nhuong
-  journal: "Journal of Information Security and Applications"
-  year: 2026
+   year: 2026
