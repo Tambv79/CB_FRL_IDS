@@ -47,7 +47,7 @@ To verify the primary release asset:
 python scripts/verify_release_asset.py CB_FRL_IDS_REPRODUCIBILITY_ARTIFACT_v1.0.0.zip
 ```
 
-The v1.1.0 targeted-validity asset is accompanied by its published SHA-256 checksum.
+The v1.1.0 targeted-validity asset is accompanied by its published SHA-256 checksum. The v1.2.0 release additionally publishes a SHA-256 manifest for the advisor-compliance evidence package.
 
 ## Reproduction overview
 
@@ -69,7 +69,7 @@ Raw CICIDS2017 and CICIoT2023 files are not redistributed and remain subject to 
 
 ## Citation
 
-Use the **Cite this repository** panel generated from `CITATION.cff`.
+Use the **Cite this repository** panel generated from `CITATION.cff`. The associated manuscript is currently represented as an unpublished work in preparation; journal metadata should only be added after a corresponding publication state exists.
 
 ## Authors
 
@@ -88,4 +88,3 @@ See `LICENSE` and `NOTICE.md`.
 ## Manuscript presentation alignment
 
 The final pre-submission presentation alignment is documented in [`docs/MANUSCRIPT_ALIGNMENT_v1.1.1.md`](docs/MANUSCRIPT_ALIGNMENT_v1.1.1.md). It updates the workflow figure and LaTeX float placement only; all experimental evidence and scientific conclusions remain unchanged.
-

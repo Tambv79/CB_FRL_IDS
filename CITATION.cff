@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this repository, please cite the associated manuscript."
+message: "If you use this repository, please cite this software release and, when available, the associated manuscript."
 title: "CB-FedSelect: Reproducibility Artifacts for Communication-Budgeted Pre-Upload Client Selection for Federated Intrusion Detection"
 type: software
 authors:
@@ -24,6 +24,7 @@ keywords:
   - metadata leakage
 preferred-citation:
   type: unpublished
+  status: in-preparation
   title: "Communication-Budgeted Pre-Upload Client Selection for Federated Intrusion Detection"
   authors:
     - family-names: Bui
@@ -33,4 +34,4 @@ preferred-citation:
       given-names: Van-Hung
     - family-names: Le
       given-names: Dac-Nhuong
-   year: 2026
+  year: 2026
